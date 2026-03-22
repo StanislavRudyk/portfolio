@@ -321,7 +321,7 @@ body.light-theme #theme-toggle .moon { display: none; }
     .p-visual { height: 300px; border-radius: 20px; }
     .projects-list { gap: 6rem; }
 
-    .card-hero-title { font-size: 8vw; margin-bottom: 1rem; }
+    .card-hero-title { font-size: 2.2rem; margin-bottom: 1rem; letter-spacing: 0; word-break: break-word; }
     .card-subtitle { font-size: 0.95rem; }
     .card-upper { padding: 40px 20px; }
     .card-lower { padding: 30px 20px; }
