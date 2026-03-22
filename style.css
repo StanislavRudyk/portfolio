@@ -321,7 +321,9 @@ body.light-theme #theme-toggle .moon { display: none; }
     .p-visual { height: 300px; border-radius: 20px; }
     .projects-list { gap: 6rem; }
 
-    .card-hero-title { font-size: 14vw; }
-    .card-upper { padding: 60px 20px; }
-    .card-lower { padding: 40px 20px; }
+    .card-hero-title { font-size: 8vw; margin-bottom: 1rem; }
+    .card-subtitle { font-size: 0.95rem; }
+    .card-upper { padding: 40px 20px; }
+    .card-lower { padding: 30px 20px; }
+    .contact-mini-card { padding: 30px 20px; }
 }

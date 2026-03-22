@@ -164,20 +164,21 @@ window.addEventListener('resize', () => {
 // GSAP Animations for sections
 gsap.registerPlugin(ScrollTrigger);
 
+const isMobile = window.innerWidth <= 768;
+
 document.querySelectorAll('section').forEach(section => {
     gsap.from(section, {
         opacity: 0,
-        y: 50,
-        duration: 1.2,
+        y: isMobile ? 30 : 50,
+        duration: isMobile ? 0.8 : 1.2,
         ease: "power3.out",
         scrollTrigger: {
             trigger: section,
-            start: "top 80%",
+            start: isMobile ? "top 85%" : "top 80%",
             toggleActions: "play none none reverse"
         }
     });
 });
-
 // Scramble Text Effect
 class TextScramble {
   constructor(el) {
