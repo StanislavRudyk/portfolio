@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Станіслав Рудик | Backend Developer Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+    
+    <main id="main-wrapper">
+        <div id="content-container">
+            
+            <nav class="navbar">
+                <a href="#" class="nav-logo">SR<span>.</span></a>
+                <div class="nav-links">
+                    <a href="#about" data-i18n="nav_about">Про мене</a>
+                    <a href="#expertise" data-i18n="nav_expertise">Стек</a>
+                    <a href="#projects" data-i18n="nav_projects">Мої роботи</a>
+                    <a href="#contact" class="nav-cta" data-i18n="nav_contact">Контакти</a>
+                    
+                    <div class="controls">
+                        <button id="theme-toggle" class="control-btn" title="Перемкнути тему">
+                            <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                        <button id="lang-toggle" class="control-btn" title="Change Language">EN</button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- HERO SECTION -->
+            <section class="hero" id="home">
+                <div class="container">
+                    <div class="hero-layout">
+                        <div class="hero-content">
+                            <span class="hero-tag" data-i18n="hero_tag">Digital Architect & Backend Engineer</span>
+                            <h1 class="hero-title">BACKEND<br>SOFTWARE<br>DEVELOPER<span>_</span></h1>
+                            <div class="hero-name" data-i18n="hero_name">СТАНІСЛАВ РУДИК</div>
+                            <p class="hero-lead" data-i18n="hero_lead">Розробка високонавантажених серверних рішень та складних бізнес-екосистем. Створюю відмовостійкий код з акцентом на архітектурну чистоту та максимальну продуктивність.</p>
+                            <div class="hero-btns">
+                                <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Дивитися роботи</a>
+                                <a href="https://t.me/sqweqty" target="_blank" class="btn btn-secondary" data-i18n="hero_btn_contact">Зв'язатися</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT ME -->
+            <section class="about section-padding" id="about">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="sub-label" data-i18n="about_sub">01. ПРО МЕНЕ</span>
+                        <h2 class="section-title" data-i18n="about_title">Backend Engineer / <br>Software Developer</h2>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p data-i18n="about_p1">Мій основний фокус це проектування та розробка високонавантажених серверних архітектур на базі <b>C# 13</b> та платформі <b>.NET 9</b>. Я не просто пишу код, а будую масштабовані екосистеми з використанням <b>Clean Architecture</b> та <b>Domain-Driven Design (DDD)</b>. Кожне моє технічне рішення проходить через призму продуктивності, безпеки та відмовостійкості, що дозволяє створювати системи, здатні витримувати екстремальні навантаження без деградації сервісу.</p>
+                            
+                            <p data-i18n="about_p2">В межах <b>IT-волонтерства</b> я займався вирішенням критичних проблем зв'язку в умовах обмеженої пропускної здатності. Я спроектував та впровадив <b>власний бінарний протокол передачі даних</b>, який дозволив скоротити мережевий трафік на 60%. Для підтримки консистентності даних у розподілених вузлах я реалізував логіку <b>Conflict Resolution</b> на основі <b>CRDT (Conflict-free Replicated Data Types)</b>, що забезпечило автоматичне вирішення конфліктів стану без постійного з'єднання.</p>
+                            
+                            <p data-i18n="about_p3">Мій шлях на фрілансі як <b>Full-cycle Engineer</b> це еволюція від простого написання коду до ролі стратегічного <b>технічного партнера</b>. Я спеціалізуюсь на побудові прозорої комунікації з клієнтами, де моє ключове завдання трансформувати розмиті бізнес-ідеї у чітку технічну архітектуру. Я глибоко занурююсь у бізнес-логіку замовника, проводжу аналіз ризиків та допомагаю обрати оптимальний стек для досягнення цілей. Керуючи проектом від першого діалогу до фінального деплою в Docker та налаштування CI/CD, я гарантую не лише технічну досконалість, а й відповідність продукту реальним потребам ринку.</p>
+                            
+                            <div class="personal-matrix">
+                                <span class="q-tag" data-i18n="about_mat1">Експертиза .NET 9 & C# 13</span>
+                                <span class="q-tag" data-i18n="about_mat2">Розподілені системи та CRDT</span>
+                                <span class="q-tag" data-i18n="about_mat3">Full-cycle розробка продуктів</span>
+                                <span class="q-tag" data-i18n="about_mat4">High-load архітектура</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FULL SKILL MATRIX -->
+            <section class="expertise section-padding" id="expertise">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="sub-label" data-i18n="exp_sub">02. НАВИЧКИ</span>
+                        <h2 class="section-title" data-i18n="exp_title">Технічний стек та навички</h2>
+                    </div>
+                    <div class="skills-matrix">
+                        <div class="skill-group">
+                            <h3 class="group-title" data-i18n="exp_be">BACKEND</h3>
+                            <div class="skill-badges">
+                                <span>C# 13</span><span data-i18n="sk_netc">ASP.NET Core</span><span data-i18n="sk_api">ASP.NET Web API</span><span data-i18n="sk_mvc">ASP.NET MVC</span><span data-i18n="sk_nf">.NET Framework</span>
+                                <span>Python</span><span>FastAPI</span><span>Django</span><span>Flask</span><span>aiogram</span><span>AsyncTask</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h3 class="group-title" data-i18n="exp_arch">АРХІТЕКТУРА</h3>
+                            <div class="skill-badges">
+                                <span data-i18n="sk_micro">Мікросервісна архітектура</span><span data-i18n="sk_shab">Знання шаблонів проєктування</span><span data-i18n="sk_oop">Знання принципів ООП</span><span data-i18n="sk_solid">SOLID Principles</span><span>Clean Architecture</span><span>DDD</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h3 class="group-title" data-i18n="exp_dev">ТЕХНОЛОГІЇ</h3>
+                            <div class="skill-badges">
+                                <span>Git</span><span>GitHub</span><span>Docker</span><span>Swagger</span><span>PostgreSQL</span><span>MySQL</span><span>SQL</span><span>REST</span>
+                                <span>Selenium</span><span data-i18n="sk_tg">Налаштування Telegram-ботів</span><span>Requests</span><span>HTML</span><span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h3 class="group-title" data-i18n="exp_soft">SOFT SKILLS</h3>
+                            <div class="skill-badges">
+                                <span data-i18n="sk_comm">Комунікабельність</span><span data-i18n="sk_learn">Здатність до навчання</span><span data-i18n="sk_nice">Доброзичливість</span><span data-i18n="sk_nonconf">Неконфліктність</span><span data-i18n="sk_honest">Чесність</span>
+                                <span data-i18n="sk_adapt">Адаптивність</span><span data-i18n="sk_discip">Дисциплінованість</span><span data-i18n="sk_org">Організованість</span><span data-i18n="sk_hard">Працьовитість</span><span data-i18n="sk_resp">Відповідальність</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="projects section-padding" id="projects">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="sub-label" data-i18n="proj_sub">03. МОЇ РОБОТИ</span>
+                        <h2 class="section-title" data-i18n="proj_title">ОБРАНІ ПРОЄКТИ</h2>
+                    </div>
+                    <div class="projects-list">
+                        <!-- Cafe System Project -->
+                        <div class="project-card">
+                            <div class="p-info">
+                                <h3 class="p-title" data-i18n="proj1_title">Coffesystem</h3>
+                                <p class="p-desc" data-i18n="proj1_desc">Комплексне рішення для повного циклу управління кав'ярнею на базі <b>.NET 8/9</b> та <b>PostgreSQL</b>. Система автоматизує все від миттєвого оформлення чеків у терміналі касира з кошиком <b>SovereignLedger</b> до детального складського обліку та аналітики виручки в реальному часі. Унікальний дизайн на рушії <b>Sovereign UI</b> забезпечує преміальний UX, а <b>Docker</b> надійний деплой бізнес-логіки.</p>
+                                <a href="https://github.com/StanislavRudyk/coffesystem-" target="_blank" class="p-link">Код на GitHub ↗</a>
+                            </div>
+                            <div class="p-visual">
+                                <img src="C:/Users/Game-X/.gemini/antigravity/brain/8cacbd1a-8ff9-4424-ae91-a94c9c062dd3/media__1774134194034.jpg" alt="Cafe System">
+                            </div>
+                        </div>
+                        <!-- Komorebi Project -->
+                        <div class="project-card reverse">
+                            <div class="p-info">
+                                <h3 class="p-title" data-i18n="proj2_title">Komorebi-Shop</h3>
+                                <p class="p-desc" data-i18n="proj2_desc">Масштабна e-commerce платформа для сучасного онлайн-рітейлу на базі <b>FastAPI</b>. Додаток забезпечує повний цикл покупок від розумної фільтрації товарів за категоріями до асинхронної обробки замовлень та управління кошиком. Система гарантує миттєвий відгук інтерфейсу та повну безпеку персональних даних користувачів.</p>
+                                <a href="https://github.com/StanislavRudyk/Komorebi-Shop" target="_blank" class="p-link">Вихідний код ↗</a>
+                            </div>
+                            <div class="p-visual">
+                                <img src="C:/Users/Game-X/.gemini/antigravity/brain/8cacbd1a-8ff9-4424-ae91-a94c9c062dd3/media__1774134256420.png" alt="Komorebi Shop">
+                            </div>
+                        </div>
+
+                        <!-- Parser Project -->
+                        <div class="project-card">
+                            <div class="p-info">
+                                <h3 class="p-title" data-i18n="proj3_title">Promokod-parser</h3>
+                                <p class="p-desc" data-i18n="proj3_desc">Автоматизований інтелектуальний помічник для пошуку та агрегації вигідних пропозицій на <b>Python</b>. Програма самостійно сканує десятки платформ, обходить захисні системи та збирає актуальні промокоди в єдину базу. Завдяки багатопотоковості користувач завжди отримує лише перевірену та свіжу інформацію без зайвих зусиль.</p>
+                                <a href="https://github.com/StanislavRudyk/promokod-parser" target="_blank" class="p-link">Проєкт на GitHub ↗</a>
+                            </div>
+                            <div class="p-visual">
+                                <img src="C:/Users/Game-X/.gemini/antigravity/brain/8cacbd1a-8ff9-4424-ae91-a94c9c062dd3/media__1774134435728.png" alt="Promokod Parser">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION (REFERENCE CARD) -->
+            <section class="contact section-padding" id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="sub-label" data-i18n="contact_sub">04. КОНТАКТИ</span>
+                        <h2 class="section-title" data-i18n="contact_title">Зв’язок та Співпраця</h2>
+                    </div>
+
+                    <div class="contact-floating-card">
+                        <div class="card-upper">
+                            <h2 class="card-hero-title" data-i18n="card_title">ЗВ’ЯЖІТЬСЯ ЗІ МНОЮ</h2>
+                            <p class="card-subtitle" data-i18n="card_subtitle">Завжди відкритий до нових викликів, співпраці та архітектурно складних рішений. Буду радий обговорити ваш проєкт.</p>
+                        </div>
+                        
+                        <div class="card-lower">
+                            <div class="contact-grid">
+                                <!-- Email Card -->
+                                <a href="mailto:stasikrudik63@gmail.com" class="contact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    </div>
+                                    <div class="mini-label" data-i18n="label_email">EMAIL:</div>
+                                    <div class="mini-value">stasikrudik63@gmail.com <span>↗</span></div>
+                                    <p class="mini-desc" data-i18n="desc_email">Напишіть мені, і я відповім вам у найближчий час.</p>
+                                </a>
+
+                                <!-- Telegram Card -->
+                                <a href="https://t.me/sqweqty" target="_blank" class="contact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                    </div>
+                                    <div class="mini-label" data-i18n="label_tg">TELEGRAM:</div>
+                                    <div class="mini-value">@sqweqty <span>↗</span></div>
+                                    <p class="mini-desc" data-i18n="desc_tg">Найшвидший спосіб зв'язку для оперативних питань.</p>
+                                </a>
+
+                                <!-- GitHub Card -->
+                                <a href="https://github.com/StanislavRudyk" target="_blank" class="contact-mini-card">
+                                    <div class="mini-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </div>
+                                    <div class="mini-label" data-i18n="label_gh">GITHUB:</div>
+                                    <div class="mini-value">github.com/StanislavRudyk <span>↗</span></div>
+                                    <p class="mini-desc" data-i18n="desc_gh">Мій професійний код, архітектурні патерни та open-source.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <p data-i18n="footer_text">// STANISLAV RUDYK 2026 // <a href="https://github.com/StanislavRudyk" data-i18n="footer_repo">PROJECTS REPOSITORY ↗</a></p>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
