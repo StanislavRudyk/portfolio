@@ -243,6 +243,31 @@ function updateContent() {
     document.getElementById('lang-toggle').innerText = currentLang === 'ua' ? 'EN' : 'UA';
 }
 
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const mobileOverlay = document.getElementById('mobile-overlay');
+
+function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    mobileOverlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMenu);
+}
+
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', toggleMenu);
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) toggleMenu();
+    });
+});
+
 function initTheme() {
     if (currentTheme === 'light') document.body.classList.add('light-theme');
     updateContent();
