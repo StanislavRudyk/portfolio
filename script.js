@@ -29,6 +29,8 @@ const translations = {
         proj1_title: "Coffesystem", proj1_desc: "Комплексне рішення для повного циклу управління кав'ярнею на базі <b>.NET 8/9</b> та <b>PostgreSQL</b>. Система автоматизує все від миттєвого оформлення чеків у терміналі касира з кошиком <b>SovereignLedger</b> до детального складського обліку та аналітики виручки в реальному часі. Унікальний дизайн на рушії <b>Sovereign UI</b> забезпечує преміальний UX, а <b>Docker</b> надійний деплой бізнес-логіки.", 
         proj2_title: "Komorebi-Shop", proj2_desc: "Масштабна e-commerce платформа для сучасного онлайн-рітейлу на базі <b>FastAPI</b>. Додаток забезпечує повний цикл покупок від розумної фільтрації товарів за категоріями до асинхронної обробки замовлень та управління кошиком. Система гарантує миттєвий відгук інтерфейсу та повну безпеку персональних даних користувачів.", 
         proj3_title: "Promokod-parser", proj3_desc: "Автоматизований інтелектуальний помічник для пошуку та агрегації вигідних пропозицій на <b>Python</b>. Програма самостійно сканує десятки платформ, обходить захисні системи та збирає актуальні промокоди в єдину базу. Завдяки багатопотоковості користувач завжди отримує лише перевірену та свіжу інформацію без зайвих зусиль.", 
+        proj4_title: "Lead Importer", proj4_desc: "Високонавантажений B2B-пайплайн для збору, нормалізації та збагачення лідів. Стек: <b>FastAPI</b>, <b>PostgreSQL</b>, <b>Docker</b>, <b>Nginx</b>. Автоматизує імпорт з декількох CRM, використовує міграції <b>Alembic</b> та деплоїться через <b>GitHub Actions</b>.",
+        proj5_title: "Agronomist Platform", proj5_desc: "Full-stack enterprise платформа для агрономічного бізнесу (SaaS). Backend на <b>FastAPI</b> з <b>Google OAuth2</b> та інтеграцією з <b>React</b> фронтендом. Забезпечує управління логістикою, фінансами та аналітикою у реальному часі.",
         contact_sub: "04. КОНТАКТИ", contact_title: "Зв’язок та Співпраця",
         card_title: "ЗВ’ЯЖІТЬСЯ ЗІ МНОЮ", card_subtitle: "Завжди відкритий до нових викликів та складних рішень.",
         label_email: "EMAIL:", desc_email: "Напишіть мені, я відповім найближчим часом.",
@@ -66,6 +68,8 @@ const translations = {
         proj1_title: "Coffesystem", proj1_desc: "A comprehensive solution for the full coffee shop management cycle built on <b>.NET 8/9</b> and <b>PostgreSQL</b>. The system automates everything from instant checkout in the cashier terminal with the <b>SovereignLedger</b> cart up to detailed inventory management and real-time revenue analytics. Premium looks are powered by <b>Sovereign UI</b> with <b>Docker</b> ensuring reliable deployment.", 
         proj2_title: "Komorebi-Shop", proj2_desc: "A large-scale e-commerce platform for modern online retail built on <b>FastAPI</b>. The application manages the entire shopping lifecycle from smart product filtering by categories to asynchronous order processing and cart management. The system guarantees an instant interface response and full security of user data.", 
         proj3_title: "Promokod-parser", proj3_desc: "An automated intelligent assistant for finding and aggregating the best deals on <b>Python</b>. The program autonomously scans dozens of platforms, bypasses security systems and collects current promocodes into a single database without extra effort.", 
+        proj4_title: "Lead Importer", proj4_desc: "Production-grade B2B pipeline for automated lead processing, normalization, and enrichment. Stack: <b>FastAPI</b>, <b>PostgreSQL</b>, <b>Docker</b>, <b>Nginx</b>. Features multi-CRM integrations, <b>Alembic</b> migrations, and <b>GitHub Actions</b> CI/CD.",
+        proj5_title: "Agronomist Platform", proj5_desc: "Full-stack enterprise SaaS platform for agribusiness management. <b>FastAPI</b> backend with <b>Google OAuth2</b> integrated with a <b>React</b> dashboard. Handles logistics, real-time analytics, and role-based access.",
         contact_sub: "04. CONTACT", contact_title: "Connect & Collaborate",
         card_title: "GET IN TOUCH", card_subtitle: "Always open to new challenges and complex architectural solutions.",
         label_email: "EMAIL:", desc_email: "Email me, I will get back to you shortly.",
@@ -75,7 +79,7 @@ const translations = {
     }
 };
 
-let currentLang = localStorage.getItem('lang') || 'ua';
+let currentLang = localStorage.getItem('lang') || 'en';
 let currentTheme = localStorage.getItem('theme') || 'dark';
 
 const scene = new THREE.Scene();
